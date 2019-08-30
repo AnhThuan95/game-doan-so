@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Doan So</title>
+</head>
+<body>
+
+<script>
+    let number = Math.floor(Math.random() * 100 + 1);
+    let count = 6;
+    while (count > 0) {
+        let guess = parseInt(prompt("Ban doan so may?"));
+        if (guess === number) {
+            alert("You win!");
+            break;
+        } else if (guess > number) {
+            alert("Your guess is bigger than result.")
+        } else {
+            alert("Your guess is smaller than result.")
+        }
+        count--;
+    }
+    if (count === 0) {
+        alert("You lose!");
+        alert("Result: " + number);
+    }
+</script>
+
+</body>
+</html>
